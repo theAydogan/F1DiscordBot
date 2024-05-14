@@ -1,0 +1,110 @@
+//StAuth10222: I Ahmet Aydogan, 000792453 certify that this material is my original work. 
+//No other person's work has been used without due acknowledgement. 
+I have not made my work available to anyone else.
+
+
+Bot Description:
+The F1Bot provides insights and comparisons for Formula 1 drivers. 
+It fetches data from the Ergast Developer API to present real-time statistics and facts about 
+current F1 drivers, circuits, schedule, and constructor(team) information
+
+#-------------------------------#
+
+Command: /f1driver
+Format: /f1driver [drivername1] [drivername2]
+Description: Compares two current Formula 1 drivers based on their last names. 
+The command fetches details about the drivers and provides a comparison of their current positions 
+in the championship and their national backgrounds.
+
+Arguments:
+- drivername: The last name of the first F1 driver. Mandatory.
+- drivername2: The last name of the second F1 driver. Mandatory.
+
+Sample Usage:
+/f1driver Norris Russell
+
+Expected Output:
+Lando Norris is of British origin who is currently in 7 place, and George Russell is of British origin who is currently in 8 place
+
+#-------------------------------#
+
+Command: /f1schedule
+Format: /f1schedule [year]
+Description: Fetches the race schedule for a specified F1 season based on the given year. 
+It provides a list of races that took place during that particular season.
+
+Arguments:
+- year: The year for which the F1 race schedule is to be fetched. Mandatory.
+
+Sample Usage:
+/f1schedule 2021
+
+Expected Output:
+For the 2021 season, the F1 race schedule looked like this:
+Races:
+Bahrain Grand Prix
+Emilia Romagna Grand Prix
+...
+
+#-------------------------------#
+
+Command: /f1teams
+Format: /f1teams [driver] [circuit]
+Description: Fetches the information of the teams for which a particular driver has driven in a specific circuit. 
+It provides a list of constructors (teams) associated with the driver for the given circuit.
+
+Arguments:
+- driver: The name of the F1 driver. Mandatory.
+- circuit: The name of the F1 circuit. Mandatory.
+
+Sample Usage:
+/f1teams hamilton monza
+
+Expected Output:
+In the Monza circuit, Hamilton drove for these teams:
+Constructors:
+Mercedes
+McLaren
+
+#-------------------------------#
+
+Command: /f1raceresult
+Format: /f1raceresult [year] [round]
+Description: Fetches the final results of a race for a specific year and round (race number). 
+It provides a detailed list of drivers, their codes, and the points they achieved in the specified race.
+
+Arguments:
+- year: The year or season number. It determines the F1 season in which the race took place. Mandatory.
+- round: The round number of the race for the specified year. Mandatory.
+
+Sample Usage:
+/f1raceresult 2021 5
+
+Expected Output:
+In the 2021, for round 5 the result was: 
+Spanish Grand Prix Results:
+
+1	HAM	Lewis Hamilton	Points: 25 
+2	VER	Max Verstappen	Points: 18 
+3	BOT	Valtteri Bottas	Points: 15 
+
+#-------------------------------#
+
+Command: /f1driverlist
+Format: /f1driverlist [year]
+Description: Fetches a list of all Formula 1 driver names for a specified season. 
+This provides a concise list enumerating all the drivers for the given season.
+
+Arguments:
+- year: The year or season number you want to retrieve the driver list for. Mandatory.
+
+Sample Usage:
+/f1driverlist 2021
+
+Expected Output:
+Drivers:
+1.	Lewis Hamilton
+2.	Max Verstappen
+3.	Valtteri Bottas
+
+#-------------------------------#
